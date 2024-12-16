@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebRTC Example</title>
+
+    <style>
+        #video-grid {
+            grid-template-columns: repeat(auto-fill, 400px);
+            grid-auto-rows: 400px;
+        }
+
+        video {
+            width: 400px;
+            height: auto;
+        }
+    </style>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js" type="module"></script>
+</head>
+<body>
+<div id="video-grid">
+</div>
+</body>
+</html>

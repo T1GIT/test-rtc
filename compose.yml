@@ -1,0 +1,16 @@
+services:
+  coturn:
+    image: coturn/coturn
+    ports:
+      - "3478:3478"
+      - "3478:3478/udp"
+      - "5349:5349"
+      - "5349:5349/udp"
+      - "49152-50267:49152-50267/udp"
+    restart: always
+    healthcheck:
+      test: ["CMD", "turnserver", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
