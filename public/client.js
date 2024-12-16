@@ -6,7 +6,7 @@ const videoGrid = document.getElementById('video-grid');
 async function init(socketId) {
     const pc = new RTCPeerConnection({
         sdpSemantics: 'unified-plan',
-        iceServers: [{urls: ['stun:127.0.0.1:3478']}],
+        iceServers: [{urls: ['stun:192.168.0.12:3478']}],
     });
 
     pc.onicecandidate = ({ candidate }) => {
